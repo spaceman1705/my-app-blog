@@ -1,3 +1,3 @@
 export default function dashboard() {
-  return <div>test</div>;
+  return <div className="pt-10">Pilih dikiri</div>;
 }

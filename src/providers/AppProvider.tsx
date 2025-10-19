@@ -3,6 +3,7 @@ import { SessionProvider } from "next-auth/react";
 import React from "react";
 import NotistackProvider from "./notistackProvider";
 import Navbar from "@/components/navbar";
+import { Session } from "next-auth";
 
 export default function AppProvider({
   children,
@@ -10,7 +11,7 @@ export default function AppProvider({
   children: React.ReactNode;
 }) {
   return (
-    <SessionProvider>
+    <SessionProvider session={Session}>
       <NotistackProvider>
         <Navbar />
         {children}

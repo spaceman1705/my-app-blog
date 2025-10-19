@@ -1,40 +1,19 @@
+"use client";
+
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function LatestSectionSkeleton() {
   return (
-    <div className="flex flex-col gap-12 text-left items-center justify-center w-full">
-      <Skeleton className="h-12 w-[250px] flex self-start " />
-      <div className="flex gap-4 w-full">
-        <div className="flex flex-col space-y-3">
-          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[250px]" />
-            <Skeleton className="h-4 w-[200px]" />
-          </div>
-        </div>
-        <div className="flex flex-col space-y-3">
-          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[250px]" />
-            <Skeleton className="h-4 w-[200px]" />
-          </div>
-        </div>
-        <div className="flex flex-col space-y-3">
-          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[250px]" />
-            <Skeleton className="h-4 w-[200px]" />
-          </div>
-        </div>
-        <div className="flex flex-col space-y-3">
-          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[250px]" />
-            <Skeleton className="h-4 w-[200px]" />
-          </div>
-        </div>
+    <div className="rounded-lg overflow-hidden shadow-md bg-white animate-pulse">
+      <div className="relative w-full h-56">
+        <Skeleton className="w-full h-full" />
       </div>
-      <Skeleton className="h-12 w-[150px]" />
+      <div className="p-5 space-y-3">
+        <Skeleton className="h-5 w-3/4 rounded-md" />
+        <Skeleton className="h-4 w-full rounded-md" />
+        <Skeleton className="h-4 w-5/6 rounded-md" />
+        <Skeleton className="h-4 w-1/3 rounded-md mt-4" />
+      </div>
     </div>
   );
 }

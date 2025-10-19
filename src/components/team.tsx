@@ -33,7 +33,7 @@ export const teamMembers = [
 
 export default function TeamsSection() {
   return (
-    <section id="teams" className="w-full py-10 px-6 md:px-16 bg-white text-gray-800">
+    <section id="teams" className="w-full py-10 px-6 md:px-16 bg-white text-gray-800 pt-15">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -81,8 +81,6 @@ export default function TeamsSection() {
           </motion.div>
         ))}
       </div>
-
-      {/* Tombol ke halaman Teams */}
       <div className="text-center mt-12">
         <Link href="/teams">
           <button className="px-6 py-3 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-300 transition">

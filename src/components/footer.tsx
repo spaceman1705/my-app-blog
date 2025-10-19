@@ -7,7 +7,6 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-16 pb-8 px-6 md:px-16">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-        {/* Kolom 1: Brand */}
         <div>
           <h2 className="text-2xl font-bold text-yellow-400 mb-3">Taroto Dessert</h2>
           <p className="text-sm leading-relaxed mb-4">
@@ -22,26 +21,22 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-
-        {/* Kolom 2: Navigasi */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Navigasi</h3>
           <ul className="space-y-2 text-sm">
             <li><Link href="/" className="hover:text-yellow-400">Home</Link></li>
-            <li><Link href="/about" className="hover:text-yellow-400">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-yellow-400">Menu / Services</Link></li>
-            <li><Link href="/blog" className="hover:text-yellow-400">Blog</Link></li>
-            <li><Link href="/contact" className="hover:text-yellow-400">Contact</Link></li>
+            <li><Link href="#abot" className="hover:text-yellow-400">About Us</Link></li>
+            <li><Link href="#menu" className="hover:text-yellow-400">Menu / Services</Link></li>
+            <li><Link href="#teams" className="hover:text-yellow-400">Teams</Link></li>
+            <li><Link href="#blog" className="hover:text-yellow-400">Article</Link></li>
           </ul>
         </div>
-
-        {/* Kolom 3: Kontak */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Hubungi Kami</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-yellow-400" />
-              <span>Jl. Manis Bahagia No. 88, Jakarta</span>
+              <span>Jl. Manis Bahagia No. 88, Surabaya</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-yellow-400" />
@@ -54,8 +49,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-
-      {/* Garis pemisah */}
       <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Taroto Dessert. All rights reserved.
       </div>

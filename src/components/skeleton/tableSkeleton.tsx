@@ -12,29 +12,35 @@ export default function TableSkeleton({
   rows = 5,
 }: TableSkeletonProps) {
   return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full border border-gray-200 rounded-md">
-        <thead>
-          <tr>
-            {Array.from({ length: columns }).map((_, i) => (
-              <th key={i} className="border px-4 py-3 bg-gray-50">
-                <Skeleton className="h-4 w-24" />
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {Array.from({ length: rows }).map((_, rowIdx) => (
-            <tr key={rowIdx}>
-              {Array.from({ length: columns }).map((_, colIdx) => (
-                <td key={colIdx} className="border px-4 py-3">
-                  <Skeleton className="h-4 w-full" />
-                </td>
+    <div className="overflow-x-auto w-full">
+      <div className="min-w-full border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+        <table className="min-w-full divide-y divide-gray-100">
+          <thead className="bg-gray-50">
+            <tr>
+              {Array.from({ length: columns }).map((_, i) => (
+                <th key={i} className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  <Skeleton className="h-4 w-24 rounded-full" />
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody className="divide-y divide-gray-100 bg-white">
+            {Array.from({ length: rows }).map((_, rowIdx) => (
+              <tr
+                key={rowIdx}
+                className="hover:bg-gray-50 transition-colors duration-200"
+              >
+                {Array.from({ length: columns }).map((_, colIdx) => (
+                  <td key={colIdx} className="px-6 py-4">
+                    <Skeleton className="h-4 w-[90%] rounded-full" />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

@@ -42,10 +42,10 @@ export default function ArticleView() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 pt-10">
       <div className="flex self-end">
         <Dialog>
-          <DialogTrigger className="bg-green-500 text-white py-2 px-4 rounded-md ">
+          <DialogTrigger className="bg-yellow-400 text-black py-2 px-4 rounded-md ">
             + new article
           </DialogTrigger>
           <DialogContent>

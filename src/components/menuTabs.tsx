@@ -63,7 +63,10 @@ export default function MenuTabs() {
   const filteredMenu = menuData.filter((item) => item.category === activeTab);
 
   return (
-    <div id="menu" className="max-w-6xl mx-auto px-6 md:px-12 text-center pt-5">
+    <div id="menu" className="max-w-6xl mx-auto px-6 md:px-12 text-center pt-15">
+      <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
+        Our Menu 🍰
+      </h2>
       <div className="flex justify-center gap-4 mb-10">
         {["Dessert", "Drinks", "Promo"].map((tab) => (
           <button

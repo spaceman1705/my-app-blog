@@ -22,6 +22,7 @@ export const nextAuthConfig = NextAuth({
             return {
               id: user[0].objectId,
               email: user[0].email,
+              role: user[0].role ?? "user",
             };
           }
           return null;
@@ -34,13 +35,21 @@ export const nextAuthConfig = NextAuth({
   ],
   session: { strategy: "jwt" },
   pages: { signIn: "/login" },
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
-    jwt: async ({ token, user }) => {
-      if (user) token.user = user;
+    async jwt({ token, user }) {
+      if (user) {
+        token.user = user;
+        token.role = user.role;
+      }
       return token;
     },
-    session: async ({ session, token }) => {
-      if (token.user) session.user = token.user as any;
+
+    async session({ session, token }) {
+      if (token.user) {
+        session.user = token.user as any;
+        session.user.role = token.role;
+      }
       return session;
     },
   },
