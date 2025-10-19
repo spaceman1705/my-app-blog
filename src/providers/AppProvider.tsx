@@ -5,13 +5,13 @@ import NotistackProvider from "./notistackProvider";
 import Navbar from "@/components/navbar";
 import { Session } from "next-auth";
 
-export default function AppProvider({
-  children,
-}: {
+interface AppProviderProps {
   children: React.ReactNode;
-}) {
+  session?: Session | null;
+}
+export default function AppProvider({ children, session }: AppProviderProps) {
   return (
-    <SessionProvider session={Session}>
+    <SessionProvider session={session}>
       <NotistackProvider>
         <Navbar />
         {children}

@@ -8,7 +8,8 @@ export default async function ArticleDetail({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = await getArticleBySlug(slug);
+  const articles = await getArticleBySlug(slug);
+  const article = Array.isArray(articles) ? articles[0] : articles;
 
   console.log(article);
   return (
