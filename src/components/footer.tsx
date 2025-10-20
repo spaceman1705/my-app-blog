@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Taroto Dessert. All rights reserved.
+        © {new Date().getFullYear()}.
       </div>
     </footer>
   );
